@@ -87,3 +87,21 @@ The minimum expected FSR resistance must be considered when estimating maximum d
 ### Calculation Status
 
 The final total current and power requirements are pending confirmation of the MG90S servo current, PIC board power consumption, sensor module current, regulator configuration, and external power supply current rating.
+
+## External Power Supply Selection
+
+The robotic arm will use an external regulated 5 V DC power supply. The final current rating has not yet been determined.
+
+A 5 V, 3 A regulated supply is being considered as a preliminary design candidate.
+
+### Candidate Supply Calculation
+
+**P = V x I**
+
+**P = 5 V x 3 A = 15 W**
+
+A 5 V, 3 A supply can provide up to 15 W of rated output power. This does not mean the robotic arm continuously consumes 15 W.
+
+**Supply Status:** Candidate only; not yet selected or verified.
+
+Before final selection, the combined peak current of all connected subsystems must be calculated, including the MG90S servo and microcontroller circuitry. Appropriate current margin, wiring capacity, and protection must also be considered.
