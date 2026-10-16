@@ -100,6 +100,44 @@ The TCRT5000 is therefore the preferred choice for this educational robotic grip
 
 **Price Note:** The $3.39 reference is for a TCRT5000-based sensor module, not necessarily the bare Vishay TCRT5000. The final bill of materials will use the price of the exact version purchased.
 
+## Component Selection 3: Grip Force Sensor
+
+The gripper requires a force sensor to monitor contact pressure and reduce the risk of damaging objects. Three sensor options were compared based on size, cost, circuit complexity, and compatibility with the PIC18F57Q43.
+
+### Table 3: Grip Force Sensor Comparison
+
+| Solution | Advantages | Disadvantages | Price |
+|---|---|---|---|
+| **Interlink FSR 402** | Thin and lightweight; simple voltage-divider interface; suitable for detecting grip pressure | Nonlinear output; not ideal for precise force measurement | Approximately $10 (estimate) |
+| **Interlink FSR 400** | Compact sensing area; lightweight; compatible with analog measurement | Small sensing area; nonlinear output; mounting alignment matters | Price to verify |
+| **SparkFun TAL220 Load Cell** | Better suited to calibrated force measurements; useful for quantitative force feedback | Requires an amplifier or ADC interface; more complicated mechanical mounting | Price to verify |
+
+### Product Links
+
+- [Interlink FSR 402](https://www.interlinkelectronics.com/fsr-402)
+- [Interlink Electronics](https://www.interlinkelectronics.com/)
+- [SparkFun Electronics](https://www.sparkfun.com/)
+
+### Selected Component: Interlink FSR 402
+
+**Manufacturer:** Interlink Electronics
+
+**Part Number:** FSR 402 (30-81794)
+
+**Sensor Type:** Force-sensitive resistor
+
+**Microcontroller Connection:** RA0/ANA0 analog input through a voltage divider
+
+**Selection Explanation:**
+
+The Interlink FSR 402 was selected because it provides a lightweight and relatively inexpensive way to detect gripping pressure. Its thin sensing area can be incorporated into a gripper finger without requiring a complicated mechanical assembly.
+
+The FSR 400 is also compact but has a smaller sensing area. A TAL220 load cell is more appropriate when calibrated force measurement is needed, but it requires additional electronics and mechanical integration.
+
+The FSR 402 is suitable for monitoring relative grip pressure rather than measuring precise force. Its voltage-divider output can be read by the PIC18F57Q43 ADC to help the controller adjust the gripper servo and avoid excessive pressure on objects.
+
+The final resistance values, sensor mounting, and grip thresholds will be established during testing.
+
 
 
 
