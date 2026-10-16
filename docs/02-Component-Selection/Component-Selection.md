@@ -25,6 +25,11 @@ The gripper requires a servo motor that can open and close its fingers while rem
 | **TowerPro MG90S** | Metal gears improve durability; compact (13.4 g); approximately 1.8 kg·cm stall torque at 4.8 V; PWM controlled | More expensive than SG90; limited torque for heavy objects | $9.00 estimated |
 | **TowerPro MG996R** | Metal gears; approximately 9.4 kg·cm stall torque at 4.8 V; suitable for heavier gripping loads | Larger (55 g); requires more current; adds weight to the robotic arm | $11.20 |
 
+### Servo Motor Pictures
+
+| SG90 | MG90S | MG996R |
+|:---:|:---:|:---:|
+| ![TowerPro SG90](SG90.png) | ![TowerPro MG90S](MG90S.png) | ![TowerPro MG996R](MG996R.png) |
 ### Product Links
 
 - [TowerPro SG90 Digital Servo](https://torqpro.com/product/sg90-digital/)
