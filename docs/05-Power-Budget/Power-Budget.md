@@ -105,3 +105,15 @@ A 5 V, 3 A supply can provide up to 15 W of rated output power. This does not me
 **Supply Status:** Candidate only; not yet selected or verified.
 
 Before final selection, the combined peak current of all connected subsystems must be calculated, including the MG90S servo and microcontroller circuitry. Appropriate current margin, wiring capacity, and protection must also be considered.
+
+## Conclusions
+
+The preliminary power budget for Team 107's Gripper & Object Handling subsystem establishes an external regulated 5 V DC supply as the primary power source.
+
+The TowerPro MG90S servo will operate from the 5 V rail, while the PIC18F57Q43 Curiosity Nano and associated sensor interfaces will use a compatible logic power arrangement. The servo and microcontroller circuits will share a common electrical ground.
+
+A regulated 5 V, 3 A power supply is being evaluated as a candidate. Such a supply would provide a maximum rated output of 15 W. However, the final supply rating cannot be confirmed until the peak current requirements of the servo, controller, sensors, and any other subsystems sharing the supply have been verified.
+
+The power budget currently includes the relevant power equations and a component requirements table. The remaining work is to obtain verified current specifications, determine the final 3.3 V regulation arrangement, calculate simultaneous peak power demand, and confirm that the selected supply has adequate current capacity.
+
+**Final Status:** Preliminary power budget completed; numerical current verification and final supply selection remain pending.
