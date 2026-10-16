@@ -234,5 +234,41 @@ The servo and microcontroller circuits will share a common ground. Power-supply 
 
 **Final Power Approach:** External regulated 5 V supply with a compatible 3.3 V logic power arrangement.
 
+## PIC18F57Q43 Pin Connections
+
+The following table documents the planned microcontroller connections for the Gripper & Object Handling subsystem. Pin assignments will be verified against the PIC18F57Q43 Curiosity Nano pinout and the team block diagram before final PCB design.
+
+### Table 6: Microcontroller Pin Assignments
+
+| PIC Pin | Signal Name | Connected Component | Signal Type | Function |
+|---|---|---|---|---|
+| RB3 | SERVO_PWM | TowerPro MG90S servo | Digital PWM output | Controls gripper opening and closing |
+| RB5 | OBJECT_DETECT | TCRT5000 sensor interface | Digital input | Detects an object near the gripper |
+| RA0 / ANA0 | FSR_INPUT | Interlink FSR 402 voltage divider | Analog input | Measures relative gripping pressure |
+| RD0 | SAFE_OK | Team connector | Digital | Safety permission signal |
+| RD1 | RUN_REQ | Team connector | Digital | Run request signal |
+| RD2 | GRP_CMD | Team connector | Digital | Gripper command signal |
+| RD3 | OBJ_HELD | Team connector | Digital | Indicates an object is held |
+| RD4 | ARM_IN_POS | Team connector | Digital | Indicates the arm is positioned |
+| RA1 / ANA1 | SPEED_SET | Team connector | Analog | Speed setting signal |
+| RA2 / ANA2 | GRIP_FORCE | Team connector | Analog | Grip force feedback signal |
+| GND | GND | Power supply and team connectors | Ground | Shared electrical reference |
+
+### Team Connector Interface
+
+The gripper subsystem uses two planned 8-pin ribbon-cable connectors to interface with the other robotic arm subsystems. Each connector uses the same signal ordering.
+
+| Connector Pin | Signal | PIC Connection |
+|---|---|---|
+| 1 | SAFE_OK | RD0 |
+| 2 | RUN_REQ | RD1 |
+| 3 | GRP_CMD | RD2 |
+| 4 | OBJ_HELD | RD3 |
+| 5 | ARM_IN_POS | RD4 |
+| 6 | SPEED_SET | RA1 / ANA1 |
+| 7 | GRIP_FORCE | RA2 / ANA2 |
+| 8 | GND | GND |
+
+**Design Note:** Signal directions, physical header pin numbering, analog voltage limits, and PIC peripheral pin assignments must be checked against the final team interface agreement and hardware documentation. The connectors must not carry servo motor power unless specifically designed and rated for that purpose.
  
 
