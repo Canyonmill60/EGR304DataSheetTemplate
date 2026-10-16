@@ -108,9 +108,9 @@ The gripper requires a force sensor to monitor contact pressure and reduce the r
 
 | Solution | Advantages | Disadvantages | Price |
 |---|---|---|---|
-| **Interlink FSR 402** | Thin and lightweight; simple voltage-divider interface; suitable for detecting grip pressure | Nonlinear output; not ideal for precise force measurement | Approximately $10 (estimate) |
-| **Interlink FSR 400** | Compact sensing area; lightweight; compatible with analog measurement | Small sensing area; nonlinear output; mounting alignment matters | Price to verify |
-| **SparkFun TAL220 Load Cell** | Better suited to calibrated force measurements; useful for quantitative force feedback | Requires an amplifier or ADC interface; more complicated mechanical mounting | Price to verify |
+| **Interlink FSR 402** | Thin and lightweight; simple voltage-divider interface; suitable for detecting grip pressure | Nonlinear output; not ideal for precise force measurement | $2.99 |
+| **Interlink FSR 400** | Compact sensing area; lightweight; compatible with analog measurement | Small sensing area; nonlinear output; mounting alignment matters | $2.99 |
+| **SparkFun TAL220 Load Cell** | Better suited to calibrated force measurements; useful for quantitative force feedback | Requires an amplifier or ADC interface; more complicated mechanical mounting | $12.95 |
 
 ### Grip Force Sensor Pictures
 
@@ -121,9 +121,10 @@ The gripper requires a force sensor to monitor contact pressure and reduce the r
 
 ### Product Links
 
-- [Interlink FSR 402](https://www.interlinkelectronics.com/fsr-402)
-- [Interlink Electronics](https://www.interlinkelectronics.com/)
-- [SparkFun Electronics](https://www.sparkfun.com/)
+- [Interlink FSR 402 — $2.99](https://buyinterlinkelectronics.com/products/fsr-model-402)
+- [Interlink FSR 400 — $2.99](https://buyinterlinkelectronics.com/products/fsr-model-400)
+- [SparkFun TAL220 10kg Load Cell — $12.95](https://www.sparkfun.com/sensors/weight.html)
+
 
 ### Selected Component: Interlink FSR 402
 
