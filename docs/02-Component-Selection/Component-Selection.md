@@ -270,5 +270,21 @@ The gripper subsystem uses two planned 8-pin ribbon-cable connectors to interfac
 | 8 | GND | GND |
 
 **Design Note:** Signal directions, physical header pin numbering, analog voltage limits, and PIC peripheral pin assignments must be checked against the final team interface agreement and hardware documentation. The connectors must not carry servo motor power unless specifically designed and rated for that purpose.
- 
+
+## Preliminary Subsystem Budget
+
+The allocated budget for the Gripper & Object Handling subsystem is $60. The PIC18F57Q43 Curiosity Nano is already available and is not included as a new purchase.
+
+| Selected Component | Planning Cost |
+|---|---:|
+| TowerPro MG90S servo | $9.00 |
+| TCRT5000 infrared sensor module | $3.39 |
+| Interlink FSR 402 force sensor | $2.99 |
+| Kitronik Klaw MK2 gripper mechanism | $11.94 |
+| **Preliminary Subtotal** | **$27.32** |
+| **Remaining Budget** | **$32.68** |
+
+The remaining budget is reserved for the 3.3 V power arrangement, signal-conditioning resistors, capacitors, connectors, wiring, and other assembly materials.
+
+These figures are planning estimates or reference prices rather than a finalized purchase list. Before ordering, the team must confirm servo compatibility with the gripper kit, whether a servo is already included, power supply current capacity, and final supplier prices. Shipping and taxes have not yet been included.
 
