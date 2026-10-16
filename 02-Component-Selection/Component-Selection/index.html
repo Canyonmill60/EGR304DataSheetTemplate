@@ -26,7 +26,7 @@
 
     
       
-        <title>Component Selection Example - EGR 304 Data Sheet Template</title>
+        <title>Gripper Component Selection - EGR 304 Data Sheet Template</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#examples" class="md-skip">
+        <a href="#component-selection-1-gripper-servo-motor" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Component Selection Example
+              Gripper Component Selection
             
           </span>
         </div>
@@ -517,7 +517,7 @@
           
   
   <span class="md-ellipsis">
-    Component Selection Example
+    Gripper Component Selection
   </span>
   
 
@@ -528,7 +528,7 @@
         
   
   <span class="md-ellipsis">
-    Component Selection Example
+    Gripper Component Selection
   </span>
   
 
@@ -548,28 +548,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#component-selection-1-gripper-servo-motor" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      Component Selection 1: Gripper Servo Motor
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Examples">
+    <nav class="md-nav" aria-label="Component Selection 1: Gripper Servo Motor">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#style-1" class="md-nav__link">
+  <a href="#table-1-servo-motor-comparison" class="md-nav__link">
     <span class="md-ellipsis">
-      Style 1
+      Table 1: Servo Motor Comparison
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#style-2" class="md-nav__link">
+  <a href="#product-links" class="md-nav__link">
     <span class="md-ellipsis">
-      Style 2
+      Product Links
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selected-component-towerpro-mg90s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selected Component: TowerPro MG90S
     </span>
   </a>
   
@@ -815,28 +824,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#component-selection-1-gripper-servo-motor" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      Component Selection 1: Gripper Servo Motor
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Examples">
+    <nav class="md-nav" aria-label="Component Selection 1: Gripper Servo Motor">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#style-1" class="md-nav__link">
+  <a href="#table-1-servo-motor-comparison" class="md-nav__link">
     <span class="md-ellipsis">
-      Style 1
+      Table 1: Servo Motor Comparison
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#style-2" class="md-nav__link">
+  <a href="#product-links" class="md-nav__link">
     <span class="md-ellipsis">
-      Style 2
+      Product Links
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selected-component-towerpro-mg90s" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selected Component: TowerPro MG90S
     </span>
   </a>
   
@@ -870,105 +888,64 @@
   
 
 
-  <h1>Component Selection Example</h1>
+  <h1>Gripper Component Selection</h1>
 
-<h2 id="examples">Examples</h2>
-<h3 id="style-1">Style 1</h3>
-<blockquote>
-<p>This is the example found in the assignment, uses more html</p>
-</blockquote>
-<p><em>Table 1: Example component selection</em></p>
-<p><strong>External Clock Module</strong></p>
+<hr>
+<p><strong>Overview</strong>
+Component Selection Process
+This page describes the process used to select components for the Gripper &amp; Object Handling subsystem of Team 107's Simple Educational Robotic Arm.</p>
+<p>This subsystem relies on a PIC18F57Q43 Curiosity Nano microcontroller to control a servo-mechanized gripper and detect any object through infrared detection and to sense gripper strength through a Force Sensitive Resistor (FSR).</p>
+<p>The objective here is to choose low-cost components which would be able to effectively detect and grasp any object as well as to ensure their safe handling.</p>
+<p>Total budget for the chosen components is $60. The PIC18F57Q43 Curiosity Nano is already owned and doesn’t need to be purchased.</p>
+<p>The following section provides a comparison of alternatives to components in question.</p>
+<h2 id="component-selection-1-gripper-servo-motor">Component Selection 1: Gripper Servo Motor</h2>
+<p>The gripper requires a servo motor that can open and close its fingers while remaining compact, affordable, and compatible with the PIC18F57Q43 microcontroller. Three TowerPro servo motors were compared.</p>
+<h3 id="table-1-servo-motor-comparison">Table 1: Servo Motor Comparison</h3>
 <table>
 <thead>
 <tr>
-<th><strong>Solution</strong></th>
-<th><strong>Pros</strong></th>
-<th><strong>Cons</strong></th>
+<th>Solution</th>
+<th>Advantages</th>
+<th>Disadvantages</th>
+<th>Price</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a><br>Option 1.<br> XC1259TR-ND surface mount crystal<br>$1/each<br><a href="http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366">link to product</a></td>
-<td>* Inexpensive[^1]<br>* Compatible with PSoC<br>* Meets surface mount constraint of project</td>
-<td>* Requires external components and support circuitry for interface<br>* Needs special PCB layout.</td>
+<td><strong>TowerPro SG90</strong></td>
+<td>Lightweight (9 g); inexpensive; PWM controlled; suitable for small grippers</td>
+<td>Plastic gears can wear or strip; limited torque for heavier objects</td>
+<td>$4.60</td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image3.png" data-desc-position="bottom"><img alt="" src="../image3.png"></a><br>* Option 2. <br>* CTX936TR-ND surface mount oscillator <br>* $1/each <br>* <a href="http://www.digikey.com/product-detail/en/636L3I001M84320/CTX936TR-ND/2292940">Link to product</a></td>
-<td>* Outputs a square wave <br>* Stable over operating temperature <br> * Direct interface with PSoC (no external circuitry required) range</td>
-<td>* More expensive <br>* Slow shipping speed</td>
+<td><strong>TowerPro MG90S</strong></td>
+<td>Metal gears improve durability; compact (13.4 g); approximately 1.8 kg·cm stall torque at 4.8 V; PWM controlled</td>
+<td>More expensive than SG90; limited torque for heavy objects</td>
+<td>$9.00 estimated</td>
+</tr>
+<tr>
+<td><strong>TowerPro MG996R</strong></td>
+<td>Metal gears; approximately 9.4 kg·cm stall torque at 4.8 V; suitable for heavier gripping loads</td>
+<td>Larger (55 g); requires more current; adds weight to the robotic arm</td>
+<td>$11.20</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> Option 2: CTX936TR-ND surface mount oscillator</p>
-<p><strong>Rationale:</strong> A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.</p>
-<h3 id="style-2">Style 2</h3>
-<blockquote>
-<p>Also acceptable, more markdown friendly</p>
-</blockquote>
-<p><strong>External Clock Module</strong></p>
-<ol>
-<li>
-<p>XC1259TR-ND surface mount crystal</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a></p>
+<h3 id="product-links">Product Links</h3>
 <ul>
-<li>$1/each</li>
-<li><a href="http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366">link to product</a></li>
+<li><a href="https://torqpro.com/product/sg90-digital/">TowerPro SG90 Digital Servo</a></li>
+<li><a href="https://towerpro.com.tw/product/mg90s-3/">TowerPro MG90S Servo</a></li>
+<li><a href="https://torqpro.com/product/mg996r/">TowerPro MG996R Servo</a></li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>Pros</th>
-<th>Cons</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Inexpensive</td>
-<td>Requires external components and support circuitry for interface</td>
-</tr>
-<tr>
-<td>Compatible with PSoC</td>
-<td>Needs special PCB layout.</td>
-</tr>
-<tr>
-<td>Meets surface mount constraint of project</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</li>
-<li>
-<p>CTX936TR-ND surface mount oscillator</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image3.png" data-desc-position="bottom"><img alt="" src="../image3.png"></a></p>
-<ul>
-<li>$1/each</li>
-<li><a href="http://www.digikey.com/product-detail/en/636L3I001M84320/CTX936TR-ND/2292940">Link to product</a></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Pros</th>
-<th>Cons</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Outputs a square wave</td>
-<td>More expensive</td>
-</tr>
-<tr>
-<td>Stable over operating temperature</td>
-<td>Slow shipping speed</td>
-</tr>
-<tr>
-<td>Direct interface with PSoC (no external circuitry required) range</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</li>
-</ol>
+<h3 id="selected-component-towerpro-mg90s">Selected Component: TowerPro MG90S</h3>
+<p><strong>Manufacturer:</strong> TowerPro</p>
+<p><strong>Part Number:</strong> MG90S</p>
+<p><strong>Operating Voltage:</strong> Approximately 4.8–6 V</p>
+<p><strong>Control:</strong> PWM</p>
+<p><strong>Selection Explanation:</strong></p>
+<p>The TowerPro MG90S was selected for the Gripper &amp; Object Handling subsystem because it offers a suitable balance of size, cost, durability, and gripping capability. Its metal gears provide better resistance to mechanical wear than the plastic gears of the SG90. Although the MG996R produces significantly more torque, its larger size and weight make it less suitable for a compact educational gripper.</p>
+<p>The MG90S can be controlled using a PWM output from the PIC18F57Q43 microcontroller. A separate regulated servo power rail will be used, with a common ground shared with the microcontroller.</p>
+<p>The MG90S is the preferred choice pending verification that its torque is sufficient for the intended gripper mechanism and object weight.</p>
 <p><strong>Choice:</strong> Option 2: CTX936TR-ND surface mount oscillator</p>
 <p><strong>Rationale:</strong> A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.</p>
 
