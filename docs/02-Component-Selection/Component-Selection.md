@@ -67,6 +67,13 @@ The gripper requires an object detection sensor to determine when an object is p
 | **Vishay CNY70** | Very inexpensive; compact; simple phototransistor output; low component count | Very short sensing distance; sensitive to object surface and alignment | $0.95 |
 | **ST VL53L0X with Adafruit breakout** | Measures distance rather than reflected intensity alone; longer detection range; digital I²C interface | More expensive; requires additional firmware; changes the interface used in the existing block diagram | $14.95 |
 
+### Object Sensor Pictures
+
+| TCRT5000 | CNY70 | VL53L0X |
+|:---:|:---:|:---:|
+| ![TCRT5000 Infrared Sensor](TCRT5000.png) | ![CNY70 Reflective Sensor](CNY70.png) | ![VL53L0X Distance Sensor](VL53L0X.png) |
+
+
 ### Product Links
 
 - [TCRT5000 infrared sensor module](https://longan-labs.cc/products/2030007)
