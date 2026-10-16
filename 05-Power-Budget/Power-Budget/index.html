@@ -778,6 +778,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#external-power-supply-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Power Supply Selection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="External Power Supply Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#candidate-supply-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Candidate Supply Calculation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -967,6 +991,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#external-power-supply-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Power Supply Selection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="External Power Supply Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#candidate-supply-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Candidate Supply Calculation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1100,6 +1148,15 @@
 <p>The minimum expected FSR resistance must be considered when estimating maximum divider current.</p>
 <h3 id="calculation-status">Calculation Status</h3>
 <p>The final total current and power requirements are pending confirmation of the MG90S servo current, PIC board power consumption, sensor module current, regulator configuration, and external power supply current rating.</p>
+<h2 id="external-power-supply-selection">External Power Supply Selection</h2>
+<p>The robotic arm will use an external regulated 5 V DC power supply. The final current rating has not yet been determined.</p>
+<p>A 5 V, 3 A regulated supply is being considered as a preliminary design candidate.</p>
+<h3 id="candidate-supply-calculation">Candidate Supply Calculation</h3>
+<p><strong>P = V x I</strong></p>
+<p><strong>P = 5 V x 3 A = 15 W</strong></p>
+<p>A 5 V, 3 A supply can provide up to 15 W of rated output power. This does not mean the robotic arm continuously consumes 15 W.</p>
+<p><strong>Supply Status:</strong> Candidate only; not yet selected or verified.</p>
+<p>Before final selection, the combined peak current of all connected subsystems must be calculated, including the MG90S servo and microcontroller circuitry. Appropriate current margin, wiring capacity, and protection must also be considered.</p>
 
 
 
