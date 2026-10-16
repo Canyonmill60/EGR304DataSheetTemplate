@@ -598,6 +598,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#component-selection-2-object-detection-sensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component Selection 2: Object Detection Sensor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Selection 2: Object Detection Sensor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-2-object-sensor-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 2: Object Sensor Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-links_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Links
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selected-component-vishay-tcrt5000" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selected Component: Vishay TCRT5000
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -883,6 +925,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#component-selection-2-object-detection-sensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component Selection 2: Object Detection Sensor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Selection 2: Object Detection Sensor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-2-object-sensor-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 2: Object Sensor Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-links_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Links
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selected-component-vishay-tcrt5000" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selected Component: Vishay TCRT5000
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -981,6 +1065,55 @@ This page describes the process used to select components for the Gripper &amp; 
 <p>The TowerPro MG90S was selected for the Gripper &amp; Object Handling subsystem because it offers a suitable balance of size, cost, durability, and gripping capability. Its metal gears provide better resistance to mechanical wear than the plastic gears of the SG90. Although the MG996R produces significantly more torque, its larger size and weight make it less suitable for a compact educational gripper.</p>
 <p>The MG90S can be controlled using a PWM output from the PIC18F57Q43 microcontroller. A separate regulated servo power rail will be used, with a common ground shared with the microcontroller.</p>
 <p>The MG90S is the preferred choice pending verification that its torque is sufficient for the intended gripper mechanism and object weight.</p>
+<h2 id="component-selection-2-object-detection-sensor">Component Selection 2: Object Detection Sensor</h2>
+<p>The gripper requires an object detection sensor to determine when an object is positioned near the gripping fingers. Three sensors were compared based on cost, detection capability, circuit complexity, and compatibility with the PIC18F57Q43.</p>
+<h3 id="table-2-object-sensor-comparison">Table 2: Object Sensor Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Solution</th>
+<th>Advantages</th>
+<th>Disadvantages</th>
+<th>Reference Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vishay TCRT5000</strong></td>
+<td>Compact; low-cost reflective infrared sensing; compatible with a simple transistor interface; suitable for close-range object detection</td>
+<td>Detection depends on object reflectivity and distance; requires resistors and signal conditioning</td>
+<td>$3.39 (TCRT5000-based module)</td>
+</tr>
+<tr>
+<td><strong>Vishay CNY70</strong></td>
+<td>Very inexpensive; compact; simple phototransistor output; low component count</td>
+<td>Very short sensing distance; sensitive to object surface and alignment</td>
+<td>$0.95</td>
+</tr>
+<tr>
+<td><strong>ST VL53L0X with Adafruit breakout</strong></td>
+<td>Measures distance rather than reflected intensity alone; longer detection range; digital I²C interface</td>
+<td>More expensive; requires additional firmware; changes the interface used in the existing block diagram</td>
+<td>$14.95</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product-links_1">Product Links</h3>
+<ul>
+<li><a href="https://longan-labs.cc/products/2030007">TCRT5000 infrared sensor module</a></li>
+<li><a href="https://www.addicore.com/products/reflective-optical-sensor-cny70">Vishay CNY70 reflective sensor</a></li>
+<li><a href="https://www.adafruit.com/product/3317">Adafruit VL53L0X distance sensor</a></li>
+</ul>
+<h3 id="selected-component-vishay-tcrt5000">Selected Component: Vishay TCRT5000</h3>
+<p><strong>Manufacturer:</strong> Vishay</p>
+<p><strong>Part Number:</strong> TCRT5000</p>
+<p><strong>Sensor Type:</strong> Reflective infrared proximity sensor</p>
+<p><strong>Microcontroller Connection:</strong> RB5 GPIO input through signal-conditioning circuitry</p>
+<p><strong>Selection Explanation:</strong></p>
+<p>The Vishay TCRT5000 was selected because it provides a compact and economical method of detecting objects near the gripper fingers. Its reflective infrared sensing method is appropriate for short-range detection, while its phototransistor output can be interfaced with the PIC18F57Q43 using suitable resistors and a pull-up circuit.</p>
+<p>The CNY70 is less expensive but has a shorter practical sensing range. The VL53L0X offers more advanced distance measurement but introduces additional cost and firmware complexity.</p>
+<p>The TCRT5000 is therefore the preferred choice for this educational robotic gripper. The final sensor position and detection threshold will be tested with the intended objects.</p>
+<p><strong>Price Note:</strong> The $3.39 reference is for a TCRT5000-based sensor module, not necessarily the bare Vishay TCRT5000. The final bill of materials will use the price of the exact version purchased.</p>
 
 
 
