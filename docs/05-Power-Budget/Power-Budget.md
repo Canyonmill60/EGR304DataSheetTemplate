@@ -1,22 +1,20 @@
 ---
 title: Power Budget
 ---
-
 ## Overview
-Write a overview of what you did and why you did a Power Budget.
 
-> Capture your power budge as a image to display. Take time to get clean breaks and a well organized layout.
+This page documents the power budget for Team 107's Simple Educational Robotic Arm, focusing on the Gripper & Object Handling subsystem.
 
-![budget1](budgetPg1.png){style width:"350" height:"300;"}
+The purpose of the power budget is to determine the voltage and current requirements of the electrical components and verify that the external power supply can safely support the subsystem during operation.
 
-![budget2](budgetPg2.png){style width:"350" height:"300;"}
+The gripper subsystem includes the following major electrical components:
 
-![budget3](budgetPg3.png){style width:"350" height:"300;"}
+- Microchip PIC18F57Q43 Curiosity Nano microcontroller
+- TowerPro MG90S servo motor
+- Vishay TCRT5000 infrared object detection sensor module
+- Interlink Electronics FSR 402 force-sensitive resistor and voltage-divider circuit
+- Power regulation, signal-conditioning circuitry, and connectors
 
-## Conclusions
+The robotic arm uses an external regulated **5 V DC power supply**. The servo operates from the 5 V supply, while the microcontroller and sensor interfaces require a compatible logic power arrangement.
 
-From the prepare Power Budget, .....
-
-## Resouces
-
-The power budget as a PDF download is available [*here*](PowerBudgetExample.pdf), and a Microsoft Excel Sheet [*here*](PowerBudgetExample.xlsx).
+The calculations in the following sections will account for component operating current, peak current, regulator requirements, and available power supply capacity. Values that have not yet been verified will be identified as pending rather than treated as measured specifications.
