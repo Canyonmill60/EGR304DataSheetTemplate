@@ -214,20 +214,25 @@ Three voltage regulator options were compared based on cost, output current, eff
 
 ### Preferred Regulation Approach
 
-The power system must supply approximately 5 V to the MG90S servo and provide a compatible 3.3 V logic supply for the microcontroller and sensors.
+**External Power Supply:** Regulated 5 V DC
 
-A linear regulator is preferred where required by the assignment because it offers simple operation and low output noise. However, the final regulator cannot be selected solely on price.
+**Servo Supply:** 5 V DC directly from the external supply, provided sufficient current is available
 
-A conventional 7805 regulator cannot reliably produce a regulated 5 V output from a 5 V USB input because it requires additional input voltage above its output. The LM2940 also requires voltage headroom.
+**Logic Supply:** 3.3 V using a suitable low-dropout linear regulator or the Curiosity Nano's approved onboard power arrangement
 
-Before finalizing the power system, the team will verify the actual USB supply arrangement, servo current requirements, voltage-regulator dropout, and thermal dissipation. The servo must not be powered directly from a microcontroller GPIO pin.
+**Candidate 3.3 V Regulator:** Microchip MCP1700-3302 (pending current and board-power verification)
 
-The PIC18F57Q43 Curiosity Nano and external circuitry will share a common ground. All analog and digital signals connected to the PIC must remain within the microcontroller's permitted voltage range.
+**Selection Explanation:**
 
-**Final Selection Status:** Pending verification of the USB supply architecture and regulator requirements.
+The Gripper & Object Handling subsystem uses a regulated external 5 V DC supply. Because this supply already provides the nominal operating voltage required by the MG90S servo, a separate 5 V regulator is unnecessary. The servo will connect to the 5 V power rail rather than a microcontroller output pin.
 
+The PIC18F57Q43 and associated sensor interfaces will operate at compatible 3.3 V logic levels. A suitable 3.3 V low-dropout linear regulator may be used where an external logic supply is required, subject to verification of the Curiosity Nano board's approved power configuration and total current consumption.
 
+The L7805CV, LM2940, and D24V22F5 were compared as 5 V regulation alternatives, but none is selected to regulate an existing 5 V input to 5 V.
 
+The servo and microcontroller circuits will share a common ground. Power-supply current capacity, decoupling capacitors, and wiring will be verified before construction.
+
+**Final Power Approach:** External regulated 5 V supply with a compatible 3.3 V logic power arrangement.
 
  
 
