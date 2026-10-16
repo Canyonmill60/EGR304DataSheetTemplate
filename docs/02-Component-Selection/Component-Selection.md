@@ -199,6 +199,13 @@ Three voltage regulator options were compared based on cost, output current, eff
 | **Texas Instruments LM2940CT-5.0 Linear Regulator** | Regulated 5 V output; lower dropout than a traditional 7805; relatively simple circuit | Still requires input voltage above 5 V; dissipates heat; capacitor requirements must be followed | Approximately $2–$4 |
 | **Pololu D24V22F5 Switching Regulator** | Regulated 5 V output; high efficiency; suitable for higher current loads | More expensive; switching noise; not a linear regulator | Approximately $10–$15 |
 
+### Voltage Regulator Pictures
+
+| ST L7805CV | TI LM2940 | Pololu D24V22F5 |
+|:---:|:---:|:---:|
+| ![ST L7805CV Linear Regulator](L7805CV.png) | ![TI LM2940 Linear Regulator](LM2940.png) | ![Pololu D24V22F5 Switching Regulator](D24V22F5.png) |
+
+
 ### Product Links
 
 - [ST L7805CV regulator](https://www.st.com/en/power-management/l78.html)
