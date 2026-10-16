@@ -185,6 +185,40 @@ The Kitronik Klaw MK2 is the preferred mechanical gripper because it offers a lo
 
 Before finalizing this selection, the team must confirm that the mechanism can accommodate the TowerPro MG90S servo, that the available torque is sufficient, and that the force sensor can be mounted on a gripping surface. If these requirements cannot be met, an alternative gripper mechanism will be selected.
 
+## Component Selection 5: Power Supply and Voltage Regulation
+
+The Gripper & Object Handling subsystem requires regulated power for the PIC18F57Q43 microcontroller, object detection sensor, force sensor, and servo motor. The design uses a USB power source and must provide a stable supply voltage while maintaining a common ground between components.
+
+Three voltage regulator options were compared based on cost, output current, efficiency, and ease of integration.
+
+### Table 5: Voltage Regulator Comparison
+
+| Solution | Advantages | Disadvantages | Reference Price |
+|---|---|---|---|
+| **ST L7805CV Linear Regulator** | Simple circuit; regulated 5 V output; widely available; low electrical noise | Requires sufficient input voltage above 5 V; dissipates heat; limited output current | Approximately $1–$2 |
+| **Texas Instruments LM2940CT-5.0 Linear Regulator** | Regulated 5 V output; lower dropout than a traditional 7805; relatively simple circuit | Still requires input voltage above 5 V; dissipates heat; capacitor requirements must be followed | Approximately $2–$4 |
+| **Pololu D24V22F5 Switching Regulator** | Regulated 5 V output; high efficiency; suitable for higher current loads | More expensive; switching noise; not a linear regulator | Approximately $10–$15 |
+
+### Product Links
+
+- [ST L7805CV regulator](https://www.st.com/en/power-management/l78.html)
+- [Texas Instruments LM2940 regulator](https://www.ti.com/product/LM2940-N)
+- [Pololu voltage regulator products](https://www.pololu.com/category/131/step-down-voltage-regulators)
+
+### Preferred Regulation Approach
+
+The power system must supply approximately 5 V to the MG90S servo and provide a compatible 3.3 V logic supply for the microcontroller and sensors.
+
+A linear regulator is preferred where required by the assignment because it offers simple operation and low output noise. However, the final regulator cannot be selected solely on price.
+
+A conventional 7805 regulator cannot reliably produce a regulated 5 V output from a 5 V USB input because it requires additional input voltage above its output. The LM2940 also requires voltage headroom.
+
+Before finalizing the power system, the team will verify the actual USB supply arrangement, servo current requirements, voltage-regulator dropout, and thermal dissipation. The servo must not be powered directly from a microcontroller GPIO pin.
+
+The PIC18F57Q43 Curiosity Nano and external circuitry will share a common ground. All analog and digital signals connected to the PIC must remain within the microcontroller's permitted voltage range.
+
+**Final Selection Status:** Pending verification of the USB supply architecture and regulator requirements.
+
 
 
 
