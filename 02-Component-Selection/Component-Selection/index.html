@@ -802,6 +802,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pic18f57q43-pin-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      PIC18F57Q43 Pin Connections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PIC18F57Q43 Pin Connections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-6-microcontroller-pin-assignments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 6: Microcontroller Pin Assignments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-connector-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Connector Interface
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1291,6 +1324,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pic18f57q43-pin-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      PIC18F57Q43 Pin Connections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PIC18F57Q43 Pin Connections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-6-microcontroller-pin-assignments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 6: Microcontroller Pin Assignments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-connector-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Connector Interface
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1652,6 +1718,153 @@ This page describes the process used to select components for the Gripper &amp; 
 <p>The L7805CV, LM2940, and D24V22F5 were compared as 5 V regulation alternatives, but none is selected to regulate an existing 5 V input to 5 V.</p>
 <p>The servo and microcontroller circuits will share a common ground. Power-supply current capacity, decoupling capacitors, and wiring will be verified before construction.</p>
 <p><strong>Final Power Approach:</strong> External regulated 5 V supply with a compatible 3.3 V logic power arrangement.</p>
+<h2 id="pic18f57q43-pin-connections">PIC18F57Q43 Pin Connections</h2>
+<p>The following table documents the planned microcontroller connections for the Gripper &amp; Object Handling subsystem. Pin assignments will be verified against the PIC18F57Q43 Curiosity Nano pinout and the team block diagram before final PCB design.</p>
+<h3 id="table-6-microcontroller-pin-assignments">Table 6: Microcontroller Pin Assignments</h3>
+<table>
+<thead>
+<tr>
+<th>PIC Pin</th>
+<th>Signal Name</th>
+<th>Connected Component</th>
+<th>Signal Type</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RB3</td>
+<td>SERVO_PWM</td>
+<td>TowerPro MG90S servo</td>
+<td>Digital PWM output</td>
+<td>Controls gripper opening and closing</td>
+</tr>
+<tr>
+<td>RB5</td>
+<td>OBJECT_DETECT</td>
+<td>TCRT5000 sensor interface</td>
+<td>Digital input</td>
+<td>Detects an object near the gripper</td>
+</tr>
+<tr>
+<td>RA0 / ANA0</td>
+<td>FSR_INPUT</td>
+<td>Interlink FSR 402 voltage divider</td>
+<td>Analog input</td>
+<td>Measures relative gripping pressure</td>
+</tr>
+<tr>
+<td>RD0</td>
+<td>SAFE_OK</td>
+<td>Team connector</td>
+<td>Digital</td>
+<td>Safety permission signal</td>
+</tr>
+<tr>
+<td>RD1</td>
+<td>RUN_REQ</td>
+<td>Team connector</td>
+<td>Digital</td>
+<td>Run request signal</td>
+</tr>
+<tr>
+<td>RD2</td>
+<td>GRP_CMD</td>
+<td>Team connector</td>
+<td>Digital</td>
+<td>Gripper command signal</td>
+</tr>
+<tr>
+<td>RD3</td>
+<td>OBJ_HELD</td>
+<td>Team connector</td>
+<td>Digital</td>
+<td>Indicates an object is held</td>
+</tr>
+<tr>
+<td>RD4</td>
+<td>ARM_IN_POS</td>
+<td>Team connector</td>
+<td>Digital</td>
+<td>Indicates the arm is positioned</td>
+</tr>
+<tr>
+<td>RA1 / ANA1</td>
+<td>SPEED_SET</td>
+<td>Team connector</td>
+<td>Analog</td>
+<td>Speed setting signal</td>
+</tr>
+<tr>
+<td>RA2 / ANA2</td>
+<td>GRIP_FORCE</td>
+<td>Team connector</td>
+<td>Analog</td>
+<td>Grip force feedback signal</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>GND</td>
+<td>Power supply and team connectors</td>
+<td>Ground</td>
+<td>Shared electrical reference</td>
+</tr>
+</tbody>
+</table>
+<h3 id="team-connector-interface">Team Connector Interface</h3>
+<p>The gripper subsystem uses two planned 8-pin ribbon-cable connectors to interface with the other robotic arm subsystems. Each connector uses the same signal ordering.</p>
+<table>
+<thead>
+<tr>
+<th>Connector Pin</th>
+<th>Signal</th>
+<th>PIC Connection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>SAFE_OK</td>
+<td>RD0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>RUN_REQ</td>
+<td>RD1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>GRP_CMD</td>
+<td>RD2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>OBJ_HELD</td>
+<td>RD3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ARM_IN_POS</td>
+<td>RD4</td>
+</tr>
+<tr>
+<td>6</td>
+<td>SPEED_SET</td>
+<td>RA1 / ANA1</td>
+</tr>
+<tr>
+<td>7</td>
+<td>GRIP_FORCE</td>
+<td>RA2 / ANA2</td>
+</tr>
+<tr>
+<td>8</td>
+<td>GND</td>
+<td>GND</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Design Note:</strong> Signal directions, physical header pin numbering, analog voltage limits, and PIC peripheral pin assignments must be checked against the final team interface agreement and hardware documentation. The connectors must not carry servo motor power unless specifically designed and rated for that purpose.</p>
 
 
 
