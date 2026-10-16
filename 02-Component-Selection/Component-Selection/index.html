@@ -649,6 +649,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#component-selection-3-grip-force-sensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component Selection 3: Grip Force Sensor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Selection 3: Grip Force Sensor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-3-grip-force-sensor-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 3: Grip Force Sensor Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-links_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Links
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selected-component-interlink-fsr-402" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selected Component: Interlink FSR 402
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -985,6 +1027,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#component-selection-3-grip-force-sensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component Selection 3: Grip Force Sensor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Selection 3: Grip Force Sensor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-3-grip-force-sensor-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 3: Grip Force Sensor Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-links_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Links
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selected-component-interlink-fsr-402" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selected Component: Interlink FSR 402
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1149,6 +1233,55 @@ This page describes the process used to select components for the Gripper &amp; 
 <p>The CNY70 is less expensive but has a shorter practical sensing range. The VL53L0X offers more advanced distance measurement but introduces additional cost and firmware complexity.</p>
 <p>The TCRT5000 is therefore the preferred choice for this educational robotic gripper. The final sensor position and detection threshold will be tested with the intended objects.</p>
 <p><strong>Price Note:</strong> The $3.39 reference is for a TCRT5000-based sensor module, not necessarily the bare Vishay TCRT5000. The final bill of materials will use the price of the exact version purchased.</p>
+<h2 id="component-selection-3-grip-force-sensor">Component Selection 3: Grip Force Sensor</h2>
+<p>The gripper requires a force sensor to monitor contact pressure and reduce the risk of damaging objects. Three sensor options were compared based on size, cost, circuit complexity, and compatibility with the PIC18F57Q43.</p>
+<h3 id="table-3-grip-force-sensor-comparison">Table 3: Grip Force Sensor Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Solution</th>
+<th>Advantages</th>
+<th>Disadvantages</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Interlink FSR 402</strong></td>
+<td>Thin and lightweight; simple voltage-divider interface; suitable for detecting grip pressure</td>
+<td>Nonlinear output; not ideal for precise force measurement</td>
+<td>Approximately $10 (estimate)</td>
+</tr>
+<tr>
+<td><strong>Interlink FSR 400</strong></td>
+<td>Compact sensing area; lightweight; compatible with analog measurement</td>
+<td>Small sensing area; nonlinear output; mounting alignment matters</td>
+<td>Price to verify</td>
+</tr>
+<tr>
+<td><strong>SparkFun TAL220 Load Cell</strong></td>
+<td>Better suited to calibrated force measurements; useful for quantitative force feedback</td>
+<td>Requires an amplifier or ADC interface; more complicated mechanical mounting</td>
+<td>Price to verify</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product-links_2">Product Links</h3>
+<ul>
+<li><a href="https://www.interlinkelectronics.com/fsr-402">Interlink FSR 402</a></li>
+<li><a href="https://www.interlinkelectronics.com/">Interlink Electronics</a></li>
+<li><a href="https://www.sparkfun.com/">SparkFun Electronics</a></li>
+</ul>
+<h3 id="selected-component-interlink-fsr-402">Selected Component: Interlink FSR 402</h3>
+<p><strong>Manufacturer:</strong> Interlink Electronics</p>
+<p><strong>Part Number:</strong> FSR 402 (30-81794)</p>
+<p><strong>Sensor Type:</strong> Force-sensitive resistor</p>
+<p><strong>Microcontroller Connection:</strong> RA0/ANA0 analog input through a voltage divider</p>
+<p><strong>Selection Explanation:</strong></p>
+<p>The Interlink FSR 402 was selected because it provides a lightweight and relatively inexpensive way to detect gripping pressure. Its thin sensing area can be incorporated into a gripper finger without requiring a complicated mechanical assembly.</p>
+<p>The FSR 400 is also compact but has a smaller sensing area. A TAL220 load cell is more appropriate when calibrated force measurement is needed, but it requires additional electronics and mechanical integration.</p>
+<p>The FSR 402 is suitable for monitoring relative grip pressure rather than measuring precise force. Its voltage-divider output can be read by the PIC18F57Q43 ADC to help the controller adjust the gripper servo and avoid excessive pressure on objects.</p>
+<p>The final resistance values, sensor mounting, and grip thresholds will be established during testing.</p>
 
 
 
