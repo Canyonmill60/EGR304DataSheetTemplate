@@ -751,6 +751,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#component-selection-5-power-supply-and-voltage-regulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component Selection 5: Power Supply and Voltage Regulation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Selection 5: Power Supply and Voltage Regulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-5-voltage-regulator-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 5: Voltage Regulator Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-links_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Links
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preferred-regulation-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preferred Regulation Approach
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1189,6 +1231,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#component-selection-5-power-supply-and-voltage-regulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component Selection 5: Power Supply and Voltage Regulation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Selection 5: Power Supply and Voltage Regulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-5-voltage-regulator-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 5: Voltage Regulator Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-links_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Links
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preferred-regulation-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preferred Regulation Approach
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1482,6 +1566,53 @@ This page describes the process used to select components for the Gripper &amp; 
 <p><strong>Selection Explanation:</strong></p>
 <p>The Kitronik Klaw MK2 is the preferred mechanical gripper because it offers a low-cost servo-operated mechanism suitable for an educational robotic arm. It is more affordable than the other compared options, leaving additional budget for sensors, power regulation, and wiring.</p>
 <p>Before finalizing this selection, the team must confirm that the mechanism can accommodate the TowerPro MG90S servo, that the available torque is sufficient, and that the force sensor can be mounted on a gripping surface. If these requirements cannot be met, an alternative gripper mechanism will be selected.</p>
+<h2 id="component-selection-5-power-supply-and-voltage-regulation">Component Selection 5: Power Supply and Voltage Regulation</h2>
+<p>The Gripper &amp; Object Handling subsystem requires regulated power for the PIC18F57Q43 microcontroller, object detection sensor, force sensor, and servo motor. The design uses a USB power source and must provide a stable supply voltage while maintaining a common ground between components.</p>
+<p>Three voltage regulator options were compared based on cost, output current, efficiency, and ease of integration.</p>
+<h3 id="table-5-voltage-regulator-comparison">Table 5: Voltage Regulator Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Solution</th>
+<th>Advantages</th>
+<th>Disadvantages</th>
+<th>Reference Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ST L7805CV Linear Regulator</strong></td>
+<td>Simple circuit; regulated 5 V output; widely available; low electrical noise</td>
+<td>Requires sufficient input voltage above 5 V; dissipates heat; limited output current</td>
+<td>Approximately <span class="arithmatex">\(1–\)</span>2</td>
+</tr>
+<tr>
+<td><strong>Texas Instruments LM2940CT-5.0 Linear Regulator</strong></td>
+<td>Regulated 5 V output; lower dropout than a traditional 7805; relatively simple circuit</td>
+<td>Still requires input voltage above 5 V; dissipates heat; capacitor requirements must be followed</td>
+<td>Approximately <span class="arithmatex">\(2–\)</span>4</td>
+</tr>
+<tr>
+<td><strong>Pololu D24V22F5 Switching Regulator</strong></td>
+<td>Regulated 5 V output; high efficiency; suitable for higher current loads</td>
+<td>More expensive; switching noise; not a linear regulator</td>
+<td>Approximately <span class="arithmatex">\(10–\)</span>15</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product-links_4">Product Links</h3>
+<ul>
+<li><a href="https://www.st.com/en/power-management/l78.html">ST L7805CV regulator</a></li>
+<li><a href="https://www.ti.com/product/LM2940-N">Texas Instruments LM2940 regulator</a></li>
+<li><a href="https://www.pololu.com/category/131/step-down-voltage-regulators">Pololu voltage regulator products</a></li>
+</ul>
+<h3 id="preferred-regulation-approach">Preferred Regulation Approach</h3>
+<p>The power system must supply approximately 5 V to the MG90S servo and provide a compatible 3.3 V logic supply for the microcontroller and sensors.</p>
+<p>A linear regulator is preferred where required by the assignment because it offers simple operation and low output noise. However, the final regulator cannot be selected solely on price.</p>
+<p>A conventional 7805 regulator cannot reliably produce a regulated 5 V output from a 5 V USB input because it requires additional input voltage above its output. The LM2940 also requires voltage headroom.</p>
+<p>Before finalizing the power system, the team will verify the actual USB supply arrangement, servo current requirements, voltage-regulator dropout, and thermal dissipation. The servo must not be powered directly from a microcontroller GPIO pin.</p>
+<p>The PIC18F57Q43 Curiosity Nano and external circuitry will share a common ground. All analog and digital signals connected to the PIC must remain within the microcontroller's permitted voltage range.</p>
+<p><strong>Final Selection Status:</strong> Pending verification of the USB supply architecture and regulator requirements.</p>
 
 
 
