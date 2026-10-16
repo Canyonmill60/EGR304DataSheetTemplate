@@ -700,6 +700,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#component-selection-4-gripper-mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component Selection 4: Gripper Mechanism
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Selection 4: Gripper Mechanism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-4-gripper-mechanism-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 4: Gripper Mechanism Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-links_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Links
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preferred-component-kitronik-klaw-mk2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preferred Component: Kitronik Klaw MK2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1087,6 +1129,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#component-selection-4-gripper-mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component Selection 4: Gripper Mechanism
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Selection 4: Gripper Mechanism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-4-gripper-mechanism-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 4: Gripper Mechanism Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-links_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Product Links
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preferred-component-kitronik-klaw-mk2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preferred Component: Kitronik Klaw MK2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1317,6 +1401,52 @@ This page describes the process used to select components for the Gripper &amp; 
 <p>The FSR 400 is also compact but has a smaller sensing area. A TAL220 load cell is more appropriate when calibrated force measurement is needed, but it requires additional electronics and mechanical integration.</p>
 <p>The FSR 402 is suitable for monitoring relative grip pressure rather than measuring precise force. Its voltage-divider output can be read by the PIC18F57Q43 ADC to help the controller adjust the gripper servo and avoid excessive pressure on objects.</p>
 <p>The final resistance values, sensor mounting, and grip thresholds will be established during testing.</p>
+<h2 id="component-selection-4-gripper-mechanism">Component Selection 4: Gripper Mechanism</h2>
+<p>The gripper mechanism must open and close around lightweight objects while remaining compact and affordable. Three commercial mechanisms were compared.</p>
+<h3 id="table-4-gripper-mechanism-comparison">Table 4: Gripper Mechanism Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Solution</th>
+<th>Advantages</th>
+<th>Disadvantages</th>
+<th>Reference Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kitronik Klaw MK2</strong></td>
+<td>Low cost; servo-operated design; educational assembly kit</td>
+<td>Servo compatibility and mounting require verification; plastic construction</td>
+<td>$11.94</td>
+</tr>
+<tr>
+<td><strong>Lynxmotion A Style Gripper Kit</strong></td>
+<td>Mechanical gripper designed for robotics; larger jaw opening; separate servo selection</td>
+<td>Requires a compatible servo and mounting hardware; larger mechanism</td>
+<td>$13.08</td>
+</tr>
+<tr>
+<td><strong>Pololu Micro Gripper Kit with Position Feedback Servo</strong></td>
+<td>Compact; parallel gripping jaws; included feedback servo</td>
+<td>More expensive; included servo would replace the planned MG90S</td>
+<td>$29.95</td>
+</tr>
+</tbody>
+</table>
+<h3 id="product-links_3">Product Links</h3>
+<ul>
+<li><a href="https://www.robotshop.com/products/kitronik-klaw-mk2-robotic-gripper-kit">Kitronik Klaw MK2</a></li>
+<li><a href="https://www.robotshop.com/products/lynxmotion-a-style-gripper-kit">Lynxmotion A Style Gripper Kit</a></li>
+<li><a href="https://www.robotshop.com/products/pololu-micro-gripper-kit-position-feedback-servo">Pololu Micro Gripper Kit</a></li>
+</ul>
+<h3 id="preferred-component-kitronik-klaw-mk2">Preferred Component: Kitronik Klaw MK2</h3>
+<p><strong>Manufacturer:</strong> Kitronik</p>
+<p><strong>Product:</strong> Klaw MK2 Robotic Gripper Kit</p>
+<p><strong>Reference Price:</strong> $11.94</p>
+<p><strong>Selection Explanation:</strong></p>
+<p>The Kitronik Klaw MK2 is the preferred mechanical gripper because it offers a low-cost servo-operated mechanism suitable for an educational robotic arm. It is more affordable than the other compared options, leaving additional budget for sensors, power regulation, and wiring.</p>
+<p>Before finalizing this selection, the team must confirm that the mechanism can accommodate the TowerPro MG90S servo, that the available torque is sufficient, and that the force sensor can be mounted on a gripping surface. If these requirements cannot be met, an alternative gripper mechanism will be selected.</p>
 
 
 
