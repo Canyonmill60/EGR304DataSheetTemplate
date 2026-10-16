@@ -158,6 +158,13 @@ The gripper mechanism must open and close around lightweight objects while remai
 | **Lynxmotion A Style Gripper Kit** | Mechanical gripper designed for robotics; larger jaw opening; separate servo selection | Requires a compatible servo and mounting hardware; larger mechanism | $13.08 |
 | **Pololu Micro Gripper Kit with Position Feedback Servo** | Compact; parallel gripping jaws; included feedback servo | More expensive; included servo would replace the planned MG90S | $29.95 |
 
+### Gripper Mechanism Pictures
+
+| Kitronik Klaw MK2 | Lynxmotion A Style | Pololu Micro Gripper |
+|:---:|:---:|:---:|
+| ![Kitronik Klaw MK2](KlawMK2.png) | ![Lynxmotion A Style Gripper](LynxmotionGripper.png) | ![Pololu Micro Gripper](PololuGripper.png) |
+
+
 ### Product Links
 
 - [Kitronik Klaw MK2](https://www.robotshop.com/products/kitronik-klaw-mk2-robotic-gripper-kit)
