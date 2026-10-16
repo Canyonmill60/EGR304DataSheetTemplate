@@ -146,6 +146,38 @@ The FSR 402 is suitable for monitoring relative grip pressure rather than measur
 
 The final resistance values, sensor mounting, and grip thresholds will be established during testing.
 
+## Component Selection 4: Gripper Mechanism
+
+The gripper mechanism must open and close around lightweight objects while remaining compact and affordable. Three commercial mechanisms were compared.
+
+### Table 4: Gripper Mechanism Comparison
+
+| Solution | Advantages | Disadvantages | Reference Price |
+|---|---|---|---|
+| **Kitronik Klaw MK2** | Low cost; servo-operated design; educational assembly kit | Servo compatibility and mounting require verification; plastic construction | $11.94 |
+| **Lynxmotion A Style Gripper Kit** | Mechanical gripper designed for robotics; larger jaw opening; separate servo selection | Requires a compatible servo and mounting hardware; larger mechanism | $13.08 |
+| **Pololu Micro Gripper Kit with Position Feedback Servo** | Compact; parallel gripping jaws; included feedback servo | More expensive; included servo would replace the planned MG90S | $29.95 |
+
+### Product Links
+
+- [Kitronik Klaw MK2](https://www.robotshop.com/products/kitronik-klaw-mk2-robotic-gripper-kit)
+- [Lynxmotion A Style Gripper Kit](https://www.robotshop.com/products/lynxmotion-a-style-gripper-kit)
+- [Pololu Micro Gripper Kit](https://www.robotshop.com/products/pololu-micro-gripper-kit-position-feedback-servo)
+
+### Preferred Component: Kitronik Klaw MK2
+
+**Manufacturer:** Kitronik
+
+**Product:** Klaw MK2 Robotic Gripper Kit
+
+**Reference Price:** $11.94
+
+**Selection Explanation:**
+
+The Kitronik Klaw MK2 is the preferred mechanical gripper because it offers a low-cost servo-operated mechanism suitable for an educational robotic arm. It is more affordable than the other compared options, leaving additional budget for sensors, power regulation, and wiring.
+
+Before finalizing this selection, the team must confirm that the mechanism can accommodate the TowerPro MG90S servo, that the available torque is sufficient, and that the force sensor can be mounted on a gripping surface. If these requirements cannot be met, an alternative gripper mechanism will be selected.
+
 
 
 
