@@ -30,6 +30,7 @@ The gripper requires a servo motor that can open and close its fingers while rem
 | SG90 | MG90S | MG996R |
 |:---:|:---:|:---:|
 | ![TowerPro SG90](SG90.png) | ![TowerPro MG90S](MG90S.png) | ![TowerPro MG996R](MG996R.png) |
+
 ### Product Links
 
 - [TowerPro SG90 Digital Servo](https://torqpro.com/product/sg90-digital/)
@@ -58,6 +59,4 @@ The MG90S is the preferred choice pending verification that its torque is suffic
 
 
  
-**Choice:** Option 2: CTX936TR-ND surface mount oscillator
 
-**Rationale:** A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.
