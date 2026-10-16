@@ -694,6 +694,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#electrical-component-power-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electrical Component Power Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Electrical Component Power Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-1-gripper-subsystem-power-budget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 1: Gripper Subsystem Power Budget
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -799,6 +823,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#electrical-component-power-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electrical Component Power Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Electrical Component Power Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-1-gripper-subsystem-power-budget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table 1: Gripper Subsystem Power Budget
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -837,6 +885,72 @@
 </ul>
 <p>The robotic arm uses an external regulated <strong>5 V DC power supply</strong>. The servo operates from the 5 V supply, while the microcontroller and sensor interfaces require a compatible logic power arrangement.</p>
 <p>The calculations in the following sections will account for component operating current, peak current, regulator requirements, and available power supply capacity. Values that have not yet been verified will be identified as pending rather than treated as measured specifications.</p>
+<h2 id="electrical-component-power-requirements">Electrical Component Power Requirements</h2>
+<h3 id="table-1-gripper-subsystem-power-budget">Table 1: Gripper Subsystem Power Budget</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th style="text-align: right;">Quantity</th>
+<th>Supply Voltage</th>
+<th>Operating Current</th>
+<th>Peak Current</th>
+<th>Power Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TowerPro MG90S servo</td>
+<td style="text-align: right;">1</td>
+<td>5 V DC</td>
+<td>TBD</td>
+<td>TBD (stall current)</td>
+<td>External 5 V rail</td>
+</tr>
+<tr>
+<td>PIC18F57Q43 Curiosity Nano</td>
+<td style="text-align: right;">1</td>
+<td>Board-approved supply configuration</td>
+<td>TBD</td>
+<td>TBD</td>
+<td>Logic power arrangement</td>
+</tr>
+<tr>
+<td>TCRT5000 infrared sensor module</td>
+<td style="text-align: right;">1</td>
+<td>Verify module operating voltage</td>
+<td>TBD</td>
+<td>TBD</td>
+<td>Sensor power rail</td>
+</tr>
+<tr>
+<td>Interlink FSR 402 voltage divider</td>
+<td style="text-align: right;">1</td>
+<td>3.3 V</td>
+<td>TBD</td>
+<td>TBD</td>
+<td>3.3 V logic rail</td>
+</tr>
+<tr>
+<td>3.3 V regulator or onboard power circuitry</td>
+<td style="text-align: right;">1</td>
+<td>5 V input, 3.3 V output if required</td>
+<td>TBD</td>
+<td>TBD</td>
+<td>External 5 V supply</td>
+</tr>
+<tr>
+<td>Signal-conditioning circuitry</td>
+<td style="text-align: right;">1 set</td>
+<td>3.3 V</td>
+<td>TBD</td>
+<td>TBD</td>
+<td>3.3 V logic rail</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> The FSR 402 is a variable resistor, not an independently powered electronic module. Its circuit current depends on the voltage-divider resistor values and the applied force.</p>
+<p><strong>Current Status:</strong> This table records the intended power architecture. Current consumption and regulator losses must be verified before calculating the final supply requirement.</p>
 
 
 
