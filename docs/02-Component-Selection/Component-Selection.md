@@ -112,6 +112,13 @@ The gripper requires a force sensor to monitor contact pressure and reduce the r
 | **Interlink FSR 400** | Compact sensing area; lightweight; compatible with analog measurement | Small sensing area; nonlinear output; mounting alignment matters | Price to verify |
 | **SparkFun TAL220 Load Cell** | Better suited to calibrated force measurements; useful for quantitative force feedback | Requires an amplifier or ADC interface; more complicated mechanical mounting | Price to verify |
 
+### Grip Force Sensor Pictures
+
+| FSR 402 | FSR 400 | TAL220 |
+|:---:|:---:|:---:|
+| ![Interlink FSR 402](FSR402.png) | ![Interlink FSR 400](FSR400.png) | ![TAL220 Load Cell](TAL220.png) |
+
+
 ### Product Links
 
 - [Interlink FSR 402](https://www.interlinkelectronics.com/fsr-402)
