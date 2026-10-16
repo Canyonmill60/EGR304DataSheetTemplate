@@ -718,6 +718,66 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#power-budget-calculations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Budget Calculations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Power Budget Calculations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equation-1-electrical-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equation 1: Electrical Power
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equation-2-total-supply-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equation 2: Total Supply Current
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equation-3-peak-current-requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equation 3: Peak Current Requirement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equation-4-fsr-voltage-divider-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equation 4: FSR Voltage Divider Current
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculation-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculation Status
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -847,6 +907,66 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#power-budget-calculations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Budget Calculations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Power Budget Calculations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equation-1-electrical-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equation 1: Electrical Power
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equation-2-total-supply-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equation 2: Total Supply Current
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equation-3-peak-current-requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equation 3: Peak Current Requirement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equation-4-fsr-voltage-divider-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equation 4: FSR Voltage Divider Current
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculation-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculation Status
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -951,6 +1071,35 @@
 </table>
 <p><strong>Note:</strong> The FSR 402 is a variable resistor, not an independently powered electronic module. Its circuit current depends on the voltage-divider resistor values and the applied force.</p>
 <p><strong>Current Status:</strong> This table records the intended power architecture. Current consumption and regulator losses must be verified before calculating the final supply requirement.</p>
+<h2 id="power-budget-calculations">Power Budget Calculations</h2>
+<h3 id="equation-1-electrical-power">Equation 1: Electrical Power</h3>
+<p>Electrical power is calculated using:</p>
+<p><strong>P = V × I</strong></p>
+<p>Where:</p>
+<ul>
+<li>P = Electrical power in watts (W)</li>
+<li>V = Supply voltage in volts (V)</li>
+<li>I = Current in amperes (A)</li>
+</ul>
+<p>For the external 5 V power supply:</p>
+<p><strong>P = 5 × I</strong></p>
+<p>For example, if a component draws 0.5 A at 5 V:</p>
+<p><strong>P = 5 × 0.5 = 2.5 W</strong></p>
+<p>This is an example calculation, not a measured component current.</p>
+<h3 id="equation-2-total-supply-current">Equation 2: Total Supply Current</h3>
+<p>The total current drawn from the external supply is the sum of the current drawn by the servo, logic power circuitry, sensors, and other connected loads:</p>
+<p><strong>I_total = I_servo + I_logic_input + I_other_5V</strong></p>
+<p>The logic input current must include the effect of any 3.3 V regulator and its efficiency or quiescent current. Currents on different voltage rails must not simply be added without accounting for the power conversion method.</p>
+<h3 id="equation-3-peak-current-requirement">Equation 3: Peak Current Requirement</h3>
+<p>The external power supply must be capable of supporting the maximum expected simultaneous current draw:</p>
+<p><strong>I_supply_rated &gt;= I_total_peak</strong></p>
+<p>A suitable design margin should be added after verifying the actual peak currents.</p>
+<h3 id="equation-4-fsr-voltage-divider-current">Equation 4: FSR Voltage Divider Current</h3>
+<p>The FSR 402 is used as part of a voltage-divider circuit. Its current depends on the fixed resistor and the FSR resistance:</p>
+<p><strong>I_FSR = 3.3 V / (R_fixed + R_FSR)</strong></p>
+<p>The minimum expected FSR resistance must be considered when estimating maximum divider current.</p>
+<h3 id="calculation-status">Calculation Status</h3>
+<p>The final total current and power requirements are pending confirmation of the MG90S servo current, PIC board power consumption, sensor module current, regulator configuration, and external power supply current rating.</p>
 
 
 
