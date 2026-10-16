@@ -55,6 +55,44 @@ The MG90S can be controlled using a PWM output from the PIC18F57Q43 microcontrol
 
 The MG90S is the preferred choice pending verification that its torque is sufficient for the intended gripper mechanism and object weight.
 
+## Component Selection 2: Object Detection Sensor
+
+The gripper requires an object detection sensor to determine when an object is positioned near the gripping fingers. Three sensors were compared based on cost, detection capability, circuit complexity, and compatibility with the PIC18F57Q43.
+
+### Table 2: Object Sensor Comparison
+
+| Solution | Advantages | Disadvantages | Reference Price |
+|---|---|---|---|
+| **Vishay TCRT5000** | Compact; low-cost reflective infrared sensing; compatible with a simple transistor interface; suitable for close-range object detection | Detection depends on object reflectivity and distance; requires resistors and signal conditioning | $3.39 (TCRT5000-based module) |
+| **Vishay CNY70** | Very inexpensive; compact; simple phototransistor output; low component count | Very short sensing distance; sensitive to object surface and alignment | $0.95 |
+| **ST VL53L0X with Adafruit breakout** | Measures distance rather than reflected intensity alone; longer detection range; digital I²C interface | More expensive; requires additional firmware; changes the interface used in the existing block diagram | $14.95 |
+
+### Product Links
+
+- [TCRT5000 infrared sensor module](https://longan-labs.cc/products/2030007)
+- [Vishay CNY70 reflective sensor](https://www.addicore.com/products/reflective-optical-sensor-cny70)
+- [Adafruit VL53L0X distance sensor](https://www.adafruit.com/product/3317)
+
+### Selected Component: Vishay TCRT5000
+
+**Manufacturer:** Vishay
+
+**Part Number:** TCRT5000
+
+**Sensor Type:** Reflective infrared proximity sensor
+
+**Microcontroller Connection:** RB5 GPIO input through signal-conditioning circuitry
+
+**Selection Explanation:**
+
+The Vishay TCRT5000 was selected because it provides a compact and economical method of detecting objects near the gripper fingers. Its reflective infrared sensing method is appropriate for short-range detection, while its phototransistor output can be interfaced with the PIC18F57Q43 using suitable resistors and a pull-up circuit.
+
+The CNY70 is less expensive but has a shorter practical sensing range. The VL53L0X offers more advanced distance measurement but introduces additional cost and firmware complexity.
+
+The TCRT5000 is therefore the preferred choice for this educational robotic gripper. The final sensor position and detection threshold will be tested with the intended objects.
+
+**Price Note:** The $3.39 reference is for a TCRT5000-based sensor module, not necessarily the bare Vishay TCRT5000. The final bill of materials will use the price of the exact version purchased.
+
 
 
 
