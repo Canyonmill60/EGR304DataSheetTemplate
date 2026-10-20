@@ -649,9 +649,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resouces" class="md-nav__link">
+  <a href="#schematic" class="md-nav__link">
     <span class="md-ellipsis">
-      Resouces
+      Schematic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
     </span>
   </a>
   
@@ -809,9 +818,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resouces" class="md-nav__link">
+  <a href="#schematic" class="md-nav__link">
     <span class="md-ellipsis">
-      Resouces
+      Schematic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
     </span>
   </a>
   
@@ -843,11 +861,21 @@
   <h1>Schematic</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This schematic is design to support .... (highlight functionally, power, and controller).</p>
-<p>
-<strong>Figure ##:</strong> Showing a example schematic.</p>
-<h2 id="resouces">Resouces</h2>
-<p>The schematic as a PDF download is available <a href="../ExampleSchematic.pdf"><em>here</em></a>, and the Zip folder of the project <a href="../dummyZip.zip"><em>here</em></a>.</p>
+<p>The Gripper &amp; Force Sensor Circuit is designed for the Simple Educational Robotic Arm project in EGR 304.</p>
+<p>This subsystem controls the robotic arm's gripper servo motor and monitors gripping force using a force-sensitive resistor (FSR 402).</p>
+<p>The circuit uses a PIC18F57Q43 Curiosity Nano microcontroller to generate the servo control signal and read the force sensor through an analog input.</p>
+<p>An MCP6004 operational amplifier buffers the force sensor signal. A 9 V external power supply and L7805 voltage regulator provide a nominal 5 V supply for the external circuitry.</p>
+<p>Additional features include a debug LED, pushbutton, UART interface, and expansion connections.</p>
+<h2 id="schematic">Schematic</h2>
+<p><a href="../Gripper_Subsystem_Design.pdf">View Gripper Subsystem Schematic (PDF)</a></p>
+<p><strong>Figure 1:</strong> Gripper and Force Sensor Circuit schematic.</p>
+<h2 id="resources">Resources</h2>
+<p>The following design files are available:</p>
+<ul>
+<li><a href="../Gripper_Subsystem_Design.pdf">Download Schematic PDF</a></li>
+<li><a href="../Gripper_Subsystem_Design.zip">Download KiCad Project ZIP</a></li>
+</ul>
+<p>The ZIP archive contains the KiCad project files for the gripper subsystem.</p>
 
 
 
