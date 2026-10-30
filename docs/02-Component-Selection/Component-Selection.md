@@ -436,57 +436,209 @@ for the revised schematic. Current capacity
 and thermal suitability remain pending
 verification.
 
+
 ## PIC18F57Q43 Pin Connections
 
-The following table documents the planned microcontroller connections for the Gripper & Object Handling subsystem. Pin assignments will be verified against the PIC18F57Q43 Curiosity Nano pinout and the team block diagram before final PCB design.
+The following table documents the connections
+shown in the updated KiCad schematic.
 
-### Table 6: Microcontroller Pin Assignments
+| PIC Pin | Signal Name | Connected Component | Function |
+|---|---|---|---|
+| RA0 | RA0 | MCP6004 / FSR 402 | Analog force sensor input |
+| RB3 | SERVO_PWM | Kitronik Klaw Mk2 | Servo control output |
+| RB4 | UART_TX | J2 connector | UART transmit |
+| RE2 | UART_RX | J2 connector | UART receive |
+| RF0 | DEBUG_LED | Debug LED circuit | Digital output |
+| ID (verify) | DEBUG_BUTTON | Pushbutton SW1 | Intended digital input |
+| RD7 | EXP_IO1 | J4 connector | Expansion signal |
+| RD6 | EXP_IO2 | J4 connector | Expansion signal |
 
-| PIC Pin | Signal Name | Connected Component | Signal Type | Function |
-|---|---|---|---|---|
-| RB3 | SERVO_PWM | TowerPro MG90S servo | Digital PWM output | Controls gripper opening and closing |
-| RB5 | OBJECT_DETECT | TCRT5000 sensor interface | Digital input | Detects an object near the gripper |
-| RA0 / ANA0 | FSR_INPUT | Interlink FSR 402 voltage divider | Analog input | Measures relative gripping pressure |
-| RD0 | SAFE_OK | Team connector | Digital | Safety permission signal |
-| RD1 | RUN_REQ | Team connector | Digital | Run request signal |
-| RD2 | GRP_CMD | Team connector | Digital | Gripper command signal |
-| RD3 | OBJ_HELD | Team connector | Digital | Indicates an object is held |
-| RD4 | ARM_IN_POS | Team connector | Digital | Indicates the arm is positioned |
-| RA1 / ANA1 | SPEED_SET | Team connector | Analog | Speed setting signal |
-| RA2 / ANA2 | GRIP_FORCE | Team connector | Analog | Grip force feedback signal |
-| GND | GND | Power supply and team connectors | Ground | Shared electrical reference |
+**Note:** These assignments are taken from the
+revised KiCad schematic. The actual microcontroller
+pin capabilities, peripheral mappings, and debug
+button connection must be verified against the
+PIC18F57Q43 Curiosity Nano hardware documentation
+and MCC configuration before implementation.
 
-### Team Connector Interface
 
-The gripper subsystem uses two planned 8-pin ribbon-cable connectors to interface with the other robotic arm subsystems. Each connector uses the same signal ordering.
+## Team Connector Interface
 
-| Connector Pin | Signal | PIC Connection |
+The Gripper & Object Handling subsystem includes
+two 4-pin connectors for communication and
+expansion connections.
+
+### Connector J2 — Communication Interface
+
+| Connector Pin | Signal | Function |
 |---|---|---|
-| 1 | SAFE_OK | RD0 |
-| 2 | RUN_REQ | RD1 |
-| 3 | GRP_CMD | RD2 |
-| 4 | OBJ_HELD | RD3 |
-| 5 | ARM_IN_POS | RD4 |
-| 6 | SPEED_SET | RA1 / ANA1 |
-| 7 | GRIP_FORCE | RA2 / ANA2 |
-| 8 | GND | GND |
+| 1 | UART_RX | Receives serial data |
+| 2 | UART_TX | Transmits serial data |
+| 3 | RA0 | Analog force sensor signal |
+| 4 | GND | Common electrical ground |
+
+J2 provides communication signals and access to
+the analog force sensor signal.
+
+### Connector J4 — Power and Expansion Interface
+
+| Connector Pin | Signal | Function |
+|---|---|---|
+| 1 | +5V | Regulated 5 V supply |
+| 2 | GND | Common electrical ground |
+| 3 | EXP_IO1 | Expansion connection |
+| 4 | EXP_IO2 | Expansion connection |
+
+J4 provides connections for the regulated
+5 V rail, ground, and two expansion signals.
+
+### Design Considerations
+
+The connector assignments reflect the updated
+KiCad schematic.
+
+UART signal direction, voltage compatibility,
+common grounding, and connector current ratings
+must be verified before connecting the subsystem
+to other robotic arm electronics.
+
+The 5 V connection must not be used to power
+another subsystem unless the regulator and
+wiring have sufficient current capacity.
+
 
 **Design Note:** Signal directions, physical header pin numbering, analog voltage limits, and PIC peripheral pin assignments must be checked against the final team interface agreement and hardware documentation. The connectors must not carry servo motor power unless specifically designed and rated for that purpose.
 
+
 ## Preliminary Subsystem Budget
 
-The allocated budget for the Gripper & Object Handling subsystem is $60. The PIC18F57Q43 Curiosity Nano is already available and is not included as a new purchase.
+The allocated budget for the Gripper & Object
+Handling subsystem is $60.
 
-| Selected Component | Planning Cost |
-|---|---:|
-| TowerPro MG90S servo | $9.00 |
-| TCRT5000 infrared sensor module | $3.39 |
-| Interlink FSR 402 force sensor | $2.99 |
-| Kitronik Klaw MK2 gripper mechanism | $11.94 |
-| **Preliminary Subtotal** | **$27.32** |
-| **Remaining Budget** | **$32.68** |
+The PIC18F57Q43 Curiosity Nano is already owned
+and is excluded from the purchasing budget.
 
-The remaining budget is reserved for the 3.3 V power arrangement, signal-conditioning resistors, capacitors, connectors, wiring, and other assembly materials.
+The final design uses the Kitronik Klaw Mk2
+Robotic Gripper Kit, which includes its servo
+motor. A separate TowerPro MG90S is therefore
+not required.
 
-These figures are planning estimates or reference prices rather than a finalized purchase list. Before ordering, the team must confirm servo compatibility with the gripper kit, whether a servo is already included, power supply current capacity, and final supplier prices. Shipping and taxes have not yet been included.
+The TCRT5000 infrared object sensor has also
+been removed from the final design.
 
+### Selected Components
+
+| Component | Selection |
+|---|---|
+| Kitronik Klaw Mk2 with servo | Part 25104 |
+| Interlink FSR 402 | Part 30-81794 |
+| MCP6004 operational amplifier | MCP6004-I/P |
+| L7805 voltage regulator | L7805CV |
+| Fuse and fuse holder | 1 A input protection |
+| Resistors and capacitors | Supporting circuitry |
+| Connectors and wiring | Subsystem interfaces |
+| PIC18F57Q43 Curiosity Nano | Already owned |
+
+### Budget Status
+
+**Allocated Budget:** $60.00
+
+**Latest BOM Subtotal:** $44.30
+
+**Estimated Remaining Budget:** $15.70
+
+The subtotal is based on the latest component
+purchasing estimate and excludes shipping
+and applicable taxes.
+
+The component costs and remaining budget
+must be confirmed against the final BOM
+and purchase records.
+
+The selected components support the gripper's
+servo control, force sensing, power regulation,
+and communication requirements while remaining
+within the preliminary subsystem budget.
+
+
+## MPLAB Code Configurator (MCC) Configuration
+
+The Gripper & Object Handling subsystem uses the
+PIC18F57Q43 Curiosity Nano microcontroller.
+
+MPLAB Code Configurator (MCC) will be used to
+configure the microcontroller peripherals required
+for force sensing, servo control, communication,
+and debugging.
+
+### Planned Peripheral Configuration
+
+| Peripheral | Planned Pin | Function |
+|---|---|---|
+| ADC | RA0 / ANA0 | Read conditioned FSR signal |
+| PWM or Timer | RB3 | Generate servo control pulses |
+| UART TX | RB4 | Transmit serial data |
+| UART RX | RE2 | Receive serial data |
+| GPIO Output | RF0 | Control debug LED |
+| GPIO Input | TBD | Read debug pushbutton |
+| GPIO / Expansion | RD7 | Expansion IO1 |
+| GPIO / Expansion | RD6 | Expansion IO2 |
+
+### ADC Configuration
+
+The ADC will measure the analog voltage produced
+by the FSR 402 sensing circuit and MCP6004
+operational amplifier.
+
+The intended analog input is RA0/ANA0.
+
+The ADC reference voltage and input signal range
+must be verified against the actual PIC supply
+voltage before hardware testing.
+
+### Servo Control Configuration
+
+A PWM peripheral or timer-based pulse generation
+method will control the Kitronik Klaw Mk2 servo.
+
+The intended servo signal is SERVO_PWM on RB3.
+
+The selected MCC peripheral and pin routing
+must be verified to support this output.
+
+### UART Configuration
+
+The UART interface will allow communication
+between the gripper subsystem and other robotic
+arm subsystems.
+
+Planned signals:
+
+- UART_TX: RB4
+- UART_RX: RE2
+
+The UART peripheral selection, PPS configuration,
+baud rate, and voltage compatibility must be
+verified in MCC.
+
+### GPIO Configuration
+
+The debug LED will use an output signal on RF0.
+
+The debug pushbutton will require a valid
+digital input pin. Its connection must be
+corrected or verified against the Curiosity
+Nano hardware documentation.
+
+RD7 and RD6 are reserved for expansion signals.
+
+### Configuration Status
+
+The pin assignments above reflect the current
+KiCad schematic.
+
+Final MCC settings, peripheral routing,
+clock configuration, and successful firmware
+operation remain pending verification.
+
+Screenshots of the completed MCC configuration
+will be added after the settings are confirmed.
