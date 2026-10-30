@@ -65,3 +65,11 @@ The Bill of Materials includes all components required for the Gripper and Objec
 The subsystem has a $60 budget, leaving $15.70 before shipping and taxes.
 
 
+### Complete Bill of Materials
+
+The following image shows the complete Bill of Materials for the Gripper and Object Handling subsystem.
+
+![Gripper Subsystem Bill of Materials](BOM.png)
+
+
+
