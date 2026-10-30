@@ -15,5 +15,7 @@ The block diagram below is the block diagram showing the Gripper and Object Hand
 
 
 ## Block Diagram 
-<img width="1732" height="771" alt="Canyon_Individual_Block_Diagram_Editable (1) drawio" src="https://github.com/user-attachments/assets/6e1712e9-a26f-4daa-9bf9-c67bb91d666f" />
+
+![Updated Gripper and Object Handling Block Diagram](Gripper_Block_Diagram_Updated.png)
+
 
