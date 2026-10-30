@@ -15,8 +15,8 @@ An MCP6004 operational amplifier buffers the force sensor signal. A 9 V external
 Additional features include a debug LED, pushbutton, UART interface, and expansion connections.
 
 
+![Updated Gripper and Force Sensor Schematic](Gripper_Schematic_Updated.png)
 
-![Gripper and Force Sensor Schematic](Gripper_Subsystem_Schematic.png)
 
 ## Schematic
 
