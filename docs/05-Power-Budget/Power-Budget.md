@@ -377,6 +377,16 @@ A 5 V, 3 A supply can provide up to 15 W of rated output power. This does not me
 Before final selection, the combined peak current of all connected subsystems must be calculated, including the MG90S servo and microcontroller circuitry. Appropriate current margin, wiring capacity, and protection must also be considered.
 
 
+## Power Budget Excel File
+
+The preliminary power budget spreadsheet contains
+the component current estimates, power calculations,
+and regulator power requirements for the Gripper
+and Object Handling subsystem.
+
+[Download Gripper Power Budget Excel File](Team107_Gripper_Power_Budget_Preliminary.xlsx)
+
+
 ## Conclusions
 
 The updated power budget documents the electrical
