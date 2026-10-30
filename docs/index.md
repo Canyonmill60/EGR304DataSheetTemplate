@@ -9,7 +9,7 @@ tags:
 as part of<br>
 <font size= "8"> Project Name</font><br>
 for<br>
-<font size= "5"> Team 106 </font><br>
+<font size= "5"> Team 107 </font><br>
 
 **Submission: month, DD, YYYY**
 </center>
