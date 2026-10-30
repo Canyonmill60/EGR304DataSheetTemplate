@@ -14,18 +14,22 @@ The BOM includes component quantities, specifications, manufacturer information,
 
 The estimated purchasing subtotal is $44.30, excluding shipping and taxes, within the $60 subsystem budget. Separate purchase requests have been prepared for DigiKey and RobotShop USA.
 
-## Bill of Materials Example (as Table)
+## 
+## Gripper Subsystem Bill of Materials
 
-*Table ##: An example of one approach to adding your BOM table to this section.*
+The Bill of Materials includes all components required for the Gripper and Object Handling subsystem, including components already owned and additional parts needed for prototyping and assembly.
 
-| **Part Name/Description** | **Qty** | **Unit Cost** | **Total Cost** | **Manufacture** | **Manufacturer #** | **Vendor Link** |**Datasheet Link** | **Schematic Reference Designators** |
-|:--------------------|:----|:---------------|:-----|:--------|:-----|:-----|:----|:-----|
-8-bit SIPO/SISO Shift Register, SOIC-16 package | 1 | $0.49 | $ 0.49 | NXP | 74HC595D,112 | [DigiKey](https://www.digikey.com/en/products/detail/nexperia-usa-inc/74HC595D-112/763550) | [datasheet link](https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf) | U1 |
-0.1 µF Ceramic Capacitor, +/-10%, X7R, 50V, 0805 package |10 | 0.2750 | $2.75 | KEMET | C0805F104K5RACTU | PRLTA 109 |n/a | C2, C4, C6, C7, C8, C9, C10, C11, C12, C16
+[Download Gripper Subsystem BOM (Excel)](../Gripper_Subsystem_Design.xlsx)
 
-Note: Setting it up as a table is nice because it is completely viewable without scaling issues. <ins>Downside</ins> is that you have to do the math.
+### Purchasing Summary
 
-* You could also import your BOM via a screenshot of the spreadsheet created BOM
+| Supplier | Estimated Cost |
+|---|---:|
+| DigiKey | $12.56 |
+| RobotShop USA | $31.74 |
+| **Total** | **$44.30** |
+
+The subsystem has a $60 budget, leaving $15.70 before shipping and taxes.
 
 ## Bill of Materials Example (as Image)
 ![](BOM-Screenshot.png){style width: "2000"}
