@@ -6,7 +6,13 @@ tags:
 ---
 
 ## Overview
-written context
+This Bill of Materials (BOM) documents the components required for the Gripper and Object Handling subsystem of Team 107's Simple Educational Robotic Arm.
+
+The subsystem uses a Kitronik Klaw Mk2 servo-operated gripper, an FSR 402 force sensor, an MCP6004 operational amplifier, and a PIC18F57Q43 Curiosity Nano microcontroller. The circuit receives a 9 V external power input and uses a voltage regulator to provide a 5 V supply for the gripper electronics, while the microcontroller is powered separately through USB.
+
+The BOM includes component quantities, specifications, manufacturer information, supplier details, estimated prices, and spare components for prototyping and assembly.
+
+The estimated purchasing subtotal is $44.30, excluding shipping and taxes, within the $60 subsystem budget. Separate purchase requests have been prepared for DigiKey and RobotShop USA.
 
 ## Bill of Materials Example (as Table)
 
