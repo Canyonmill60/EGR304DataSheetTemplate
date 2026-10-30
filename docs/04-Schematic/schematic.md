@@ -30,6 +30,7 @@ Additional features include a debug LED, pushbutton, UART interface, and expansi
 The following design files are available:
 
 - [Download Schematic PDF](Gripper_Subsystem_Design.pdf)
-- [Download KiCad Project ZIP](Gripper_Subsystem_Design.zip)
+- [Download Updated KiCad Project ZIP](Gripper_Subsystem_Design_Updated.zip)
+
 
 The ZIP archive contains the KiCad project files for the gripper subsystem.
