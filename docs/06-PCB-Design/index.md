@@ -30,6 +30,8 @@ placement and copper routing.
 
 ## Design Verification
 
+![DRC Check Results](DRC_check_off.png)
+
 The completed PCB was checked using KiCad's Design Rules Checker (DRC).
 
 The final DRC results showed:
