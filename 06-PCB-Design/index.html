@@ -786,6 +786,92 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcb-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCB Layout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PCB Layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#front-pcb-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Front PCB View
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#back-pcb-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Back PCB View
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Verification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcb-manufacturing-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCB Manufacturing Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kicad-project-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      KiCad Project Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcb-layout-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCB Layout PDF
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -808,7 +894,34 @@
 
 
 <h1 id="pcb-design">PCB Design</h1>
-<p>Gripper &amp; Object Handling Subsystem</p>
+<h2 id="overview">Overview</h2>
+<p>This page documents the PCB design for the Gripper &amp; Object Handling subsystem of Team 107's Simple Educational Robotic Arm project for EGR 304: Embedded Systems Design.</p>
+<p>The PCB was designed using KiCad and incorporates the PIC18F57Q43 Curiosity Nano microcontroller, MCP6004 operational amplifier, FSR 402 force sensor interface, and Kitronik Klaw Mk2 servo gripper interface.</p>
+<p>The board also includes power regulation, supporting passive components, debugging features, and connections for communication with the other robotic arm subsystems.</p>
+<h2 id="pcb-layout">PCB Layout</h2>
+<p>The PCB uses a two-layer design with front and back copper routing. The board was designed within the 100 mm × 100 mm size requirement.</p>
+<h3 id="front-pcb-view">Front PCB View</h3>
+<p><img alt="Front PCB Layout" src="Gripper_PCB_Front.png" /></p>
+<h3 id="back-pcb-view">Back PCB View</h3>
+<p><img alt="Back PCB Layout" src="Gripper_PCB_Back.png" /></p>
+<h2 id="design-verification">Design Verification</h2>
+<p>The completed PCB was checked using KiCad's Design Rules Checker (DRC).</p>
+<p>The final DRC results showed:</p>
+<ul>
+<li><strong>0 errors</strong></li>
+<li><strong>0 warnings</strong></li>
+<li><strong>0 unconnected items</strong></li>
+<li><strong>0 schematic parity errors</strong></li>
+</ul>
+<p>The Gerber and drill files were also generated and analyzed using JLCPCB's Design for Manufacturing (DFM) checking tool.</p>
+<h2 id="pcb-manufacturing-files">PCB Manufacturing Files</h2>
+<p>The complete PCB manufacturing files, including Gerber and drill files, are provided below.</p>
+<p><em>Manufacturing ZIP download link will be added here.</em></p>
+<h2 id="kicad-project-files">KiCad Project Files</h2>
+<p>The complete KiCad design project, including the schematic, PCB layout, and custom footprint libraries, is provided below.</p>
+<p><em>KiCad project ZIP download link will be added here.</em></p>
+<h2 id="pcb-layout-pdf">PCB Layout PDF</h2>
+<p><em>Front and back PCB layout PDF download link will be added here.</em></p>
 
 
 
