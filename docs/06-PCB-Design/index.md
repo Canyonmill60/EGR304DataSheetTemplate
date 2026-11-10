@@ -20,6 +20,14 @@ The PCB uses a two-layer design with front and back copper routing. The board wa
 
 ![Back PCB Layout](Gripper_PCB_back.png)
 
+## PCB Layout Overview
+
+The following image shows the completed two-layer
+PCB layout designed in KiCad, including component
+placement and copper routing.
+
+![PCB Layout Overview](Gripper_PCB_Layout.png)
+
 ## Design Verification
 
 The completed PCB was checked using KiCad's Design Rules Checker (DRC).
