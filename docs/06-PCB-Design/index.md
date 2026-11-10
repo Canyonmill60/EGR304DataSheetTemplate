@@ -51,11 +51,14 @@ Handling subsystem PCB were generated using KiCad.
 These files can be used for PCB manufacturing.
 
 [Download PCB Gerber Files](Gripper_Subsystem_Gerbers.zip.zip)
+
 ## KiCad Project Files
 
-The complete KiCad design project, including the schematic, PCB layout, and custom footprint libraries, is provided below.
+The complete KiCad design project, including the
+schematic, PCB layout, and custom footprint libraries,
+is available below.
 
-*KiCad project ZIP download link will be added here.*
+[Download Complete KiCad Project](Gripper_KiCad_Project.zip)
 
 ## PCB Layout PDF
 
