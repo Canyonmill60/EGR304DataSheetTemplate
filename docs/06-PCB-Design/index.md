@@ -14,11 +14,11 @@ The PCB uses a two-layer design with front and back copper routing. The board wa
 
 ### Front PCB View
 
-![Front PCB Layout](Gripper_PCB_Front.png)
+![front PCB Layout](Gripper_PCB_Front.png)
 
 ### Back PCB View
 
-![Back PCB Layout](Gripper_PCB_Back.png)
+![back PCB Layout](Gripper_PCB_Back.png)
 
 ## Design Verification
 
