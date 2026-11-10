@@ -15,7 +15,11 @@ An MCP6004 operational amplifier buffers the force sensor signal. A 9 V external
 Additional features include a debug LED, pushbutton, UART interface, and expansion connections.
 
 
-![Updated Gripper and Force Sensor Schematic](Gripper_Schematic_Updated.png)
+## Updated Schematic
+
+The image below shows the updated schematic for the Gripper & Object Handling subsystem.
+
+![Updated Schematic](updated_schematics.png)
 
 ## Circuit Functionality
 
@@ -32,13 +36,6 @@ The Gripper and Object Handling subsystem is responsible for opening and closing
 **Communication and Debugging:** UART_RX and UART_TX connections allow communication with other robotic arm subsystems. A debug LED, pushbutton, and test points provide additional ways to monitor and troubleshoot the circuit.
 
 **Product Requirements:** This design supports the robotic arm's object-handling function by combining servo-controlled gripping, force sensing, and communication with the other subsystems. The force feedback is intended to help the system grip objects without applying excessive pressure.
-
-
-## Updated Schematic
-
-The image below shows the updated schematic for the Gripper & Object Handling subsystem.
-
-![Updated Schematic](updated_schematics.png)
 
 **Figure 1:** Gripper and Force Sensor Circuit schematic.
 
