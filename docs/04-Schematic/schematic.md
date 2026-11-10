@@ -34,9 +34,11 @@ The Gripper and Object Handling subsystem is responsible for opening and closing
 **Product Requirements:** This design supports the robotic arm's object-handling function by combining servo-controlled gripping, force sensing, and communication with the other subsystems. The force feedback is intended to help the system grip objects without applying excessive pressure.
 
 
-## Schematic
+## Updated Schematic
 
-[View Gripper Subsystem Schematic (PDF)](Gripper_Subsystem_Design.pdf)
+The image below shows the updated schematic for the Gripper & Object Handling subsystem.
+
+![Updated Schematic](updated_schematics.png)
 
 **Figure 1:** Gripper and Force Sensor Circuit schematic.
 
@@ -45,7 +47,7 @@ The Gripper and Object Handling subsystem is responsible for opening and closing
 
 The following design files are available:
 
-- [Download Schematic PDF](Gripper_Subsystem_Design.pdf)
+- [Schematic Download png](updated_schematics.png)
 - [Download Updated KiCad Project ZIP](Gripper_Subsystem_Design_Updated.zip)
 
 
